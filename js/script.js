@@ -269,6 +269,46 @@
 	
 	$(window).on('load', function() {
 		handlePreloader();
+		setTimeout(() => {
+			$("#removeOnTimer").fadeOut(2000)
+		}, 4000);
+		setTimeout(() => {
+			$("#signUp").animate({top: '11em'})
+		}, 5900);
+		$('[data-toggle="tooltip"]').tooltip();
+		setTimeout(() => {
+			$(".pop-up-banner").show();
+		}, 5000);
+		$('.close-box').click(() => {
+			$(".pop-up-banner").fadeOut(600);
+		})
+		
+		const mode = localStorage.getItem("colormode");
+
+		$(".sunny").click(() => {
+			localStorage.setItem("colormode", "sunny");
+			$(".moon").show()
+			$(".sunny").hide()
+			$("body").addClass("sunny")
+			window.location.reload()
+		})
+		$(".moon").click(() => {
+			localStorage.setItem("colormode", "moon");
+			$(".sunny").show()
+			$(".moon").hide()
+			$("body").removeClass("sunny")
+			window.location.reload()
+		})
+
+		if (mode === "sunny") {
+			$(".sunny").hide()
+			$(".moon").removeClass("d-none")
+			$("body").addClass("sunny")
+		} else if (mode === "moon") {
+			$(".sunny").show()
+			$(".moon").hide()
+			$("body").addClass("moon")
+		}
 	});	
 
 })(window.jQuery);

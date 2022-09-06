@@ -9,7 +9,7 @@ function GmapInit() {
         var $this           = $(this),
             lat             = '',
             lng             = '',
-            zoom            = 12,
+            zoom            = 19,
             scrollwheel     = false,
             zoomcontrol     = true,
             draggable       = true,
