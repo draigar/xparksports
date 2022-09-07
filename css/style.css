@@ -6038,3 +6038,14 @@ video {
 		flex-direction: column;
 	}
 }
+
+.sticky-header .main-menu .navigation>li>div {
+	padding: 20px 0px !important;
+    line-height: 30px;
+	font-size: 17px;
+    font-weight: 500;
+}
+
+.sticky-header .main-menu .navigation>li>div {
+    padding: 19px 0px;
+}
